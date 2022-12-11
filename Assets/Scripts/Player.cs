@@ -22,12 +22,22 @@ public class Player : MonoBehaviour
     {
         float moveDir = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveVector = new Vector2(0, moveDir*speed*Time.fixedDeltaTime);
+        Vector3 moveVector = new Vector3(0, moveDir*speed*Time.fixedDeltaTime);
 
         transform.position += moveVector;
 
         // for later
         // animator.SetFloat("VerticalSpeed", movement.y);
         // animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    public float getSpeed()
+    {
+        return speed;
+    }
+
+    public void setSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 }
