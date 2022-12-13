@@ -15,7 +15,6 @@ public class ChangePlayerSpeed : MonoBehaviour
             float newSpeed = other.gameObject.GetComponent<Player>().getSpeed() * speedMultiplier;
             Debug.Log("New Player Speed: " + newSpeed);
             other.gameObject.GetComponent<Player>().setSpeed(newSpeed);
-            Debug.Log(other.gameObject.GetComponent<Player>().getSpeed());
         }    
     }
 }
