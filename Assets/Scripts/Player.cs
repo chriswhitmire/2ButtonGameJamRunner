@@ -44,25 +44,54 @@ public class Player : MonoBehaviour
         this.transform.position += moveDownVector;
     }
 
+    // HORIZONTAL
     public float getHorSpeed()
     {
         return horSpeed;
     }
-    public float getVertSpeed()
+    public float getMaxHorSpeed()
     {
-        return vertSpeed;
+        return maxHorSpeed;
     }
-    public float getSize()
+    public float getMinHorSpeed()
     {
-        return size;
+        return minHorSpeed;
     }
     public void setHorSpeed(float newSpeed)
     {
         horSpeed = newSpeed;
     }
+
+    // VERTICAL
+    public float getVertSpeed()
+    {
+        return vertSpeed;
+    }
+    public float getMaxVertSpeed()
+    {
+        return maxVertSpeed;
+    }
+    public float getMinVertSpeed()
+    {
+        return minVertSpeed;
+    }
     public void setVertSpeed(float newSpeed)
     {
         vertSpeed = newSpeed;
+    }
+
+    // SIZE
+    public float getSize()
+    {
+        return size;
+    }
+    public float getMinSize()
+    {
+        return minSize;
+    }
+    public float getMaxSize()
+    {
+        return maxSize;
     }
     public void setSize(float newSize)
     {

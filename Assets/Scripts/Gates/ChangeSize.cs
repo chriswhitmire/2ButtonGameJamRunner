@@ -6,10 +6,16 @@ public class ChangeSize : MonoBehaviour
 {
     
     [SerializeField] float sizeMultiplier = 1.0f;
-    
-    [SerializeField] float maxSize = 4;
-    [SerializeField] float minSize = 0.5f;
+    float maxSize;
+    float minSize;
     [SerializeField] bool hasChangedSize = false;
+
+    private void Start() {
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        Player player = p.GetComponent<Player>();
+        maxSize = player.getMaxSize();
+        minSize = player.getMinSize();
+    }
     
     private void OnTriggerEnter2D(Collider2D other) 
     {

@@ -6,9 +6,16 @@ public class ChangeHorSpeed : MonoBehaviour
 {
     
     [SerializeField] float speedMultiplier = 1.0f;
-    [SerializeField] float maxSpeed = 10;
-    [SerializeField] float minSpeed = 0.5f;
+    float maxSpeed = 10;
+    float minSpeed = 0.5f;
     
+    private void Start() {
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        Player player = p.GetComponent<Player>();
+        maxSpeed = player.getMaxHorSpeed();
+        minSpeed = player.getMinHorSpeed();
+    }
+
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.tag == "Player")
