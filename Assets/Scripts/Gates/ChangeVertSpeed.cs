@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangePlayerSpeed : MonoBehaviour
+public class ChangeVertSpeed : MonoBehaviour
 {
     
     [SerializeField] float speedMultiplier = 1.0f;
@@ -11,7 +11,7 @@ public class ChangePlayerSpeed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("collide");
+            // Debug.Log("collide");
             float newSpeed = other.gameObject.GetComponent<Player>().getSpeed() * speedMultiplier;
             Debug.Log("New Player Speed: " + newSpeed);
             other.gameObject.GetComponent<Player>().setSpeed(newSpeed);

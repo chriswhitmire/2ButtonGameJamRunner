@@ -20,14 +20,7 @@ public class ChangeSize : MonoBehaviour
             {
                 other.gameObject.transform.localScale *= sizeMultiplier;
 
-                if(other.gameObject.transform.localScale.x > maxSize)
-                {
-                    other.gameObject.transform.localScale = new Vector3(maxSize,maxSize,maxSize);
-                }
-                else if(other.gameObject.transform.localScale.x < 0.5f)
-                {
-                    other.gameObject.transform.localScale = new Vector3(minSize,minSize,minSize);
-                }
+                setSizeLimits(other);
 
                 hasChangedSize = true;
                 Debug.Log("ChangedSize");
@@ -35,6 +28,18 @@ public class ChangeSize : MonoBehaviour
             }
             
         }    
+    }
+
+    void setSizeLimits(Collider2D other)
+    {
+        if(other.gameObject.transform.localScale.x > maxSize)
+        {
+            other.gameObject.transform.localScale = new Vector3(maxSize,maxSize,maxSize);
+        }
+        else if(other.gameObject.transform.localScale.x < 0.5f)
+        {
+            other.gameObject.transform.localScale = new Vector3(minSize,minSize,minSize);
+        }
     }
 
     void reset()

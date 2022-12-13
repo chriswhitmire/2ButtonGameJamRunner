@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 9143693534214455942}
   - component: {fileID: 9143693534214455943}
   - component: {fileID: 9143693534214455940}
-  - component: {fileID: 9143693534214455941}
   - component: {fileID: 9143693534214455938}
   m_Layer: 0
-  m_Name: -Speed
+  m_Name: -VertSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,19 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9143693534214455941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9143693534214455936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac9e26137ade4147a24d4917b443544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!114 &9143693534214455938
 MonoBehaviour:
   m_ObjectHideFlags: 0
