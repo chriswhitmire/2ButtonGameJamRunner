@@ -20,4 +20,14 @@ public class GateMovement : MonoBehaviour
 
         this.transform.position += moveVector;
    }
+
+   public float getSpeed()
+   {
+        return speed; 
+   }
+
+   public void setSpeed(float newSpeed)
+   {
+        speed = newSpeed;
+   }
 }
