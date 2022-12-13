@@ -20,6 +20,15 @@ public class ChangeSize : MonoBehaviour
             {
                 other.gameObject.transform.localScale *= sizeMultiplier;
 
+                if(other.gameObject.transform.localScale.x > maxSize)
+                {
+                    other.gameObject.transform.localScale = new Vector3(maxSize,maxSize,maxSize);
+                }
+                else if(other.gameObject.transform.localScale.x < 0.5f)
+                {
+                    other.gameObject.transform.localScale = new Vector3(minSize,minSize,minSize);
+                }
+
                 hasChangedSize = true;
                 Debug.Log("ChangedSize");
                 Invoke("reset", 1);
