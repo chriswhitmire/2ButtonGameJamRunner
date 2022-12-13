@@ -4,40 +4,68 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
+    Rigidbody2D rb;
     Vector2 movement;
-    [SerializeField] float speed = 1;
+    [SerializeField] float horSpeed = 1;
+    [SerializeField] float vertSpeed = 1;
+    [SerializeField] float size = 1;
+
+    [SerializeField] float maxHorSpeed = 10;
+    [SerializeField] float minHorSpeed = 0.5f;
+    [SerializeField] float maxVertSpeed = 10;
+    [SerializeField] float minVertSpeed = 0.5f;
+    [SerializeField] float maxSize = 4;
+    [SerializeField] float minSize = 0.5f;
     
     // for later
     Animator animator;
     
-    // Start is called before the first frame update
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody2D>(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float moveDir = Input.GetAxisRaw("Vertical");
+        float moveUpDir = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveVector = new Vector3(0, moveDir*speed*Time.fixedDeltaTime);
+        Vector3 moveUpVector = new Vector3(0, moveUpDir * vertSpeed * Time.fixedDeltaTime);
 
-        transform.position += moveVector;
-
+        transform.position += moveUpVector;
         // for later
         // animator.SetFloat("VerticalSpeed", movement.y);
         // animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    public float getSpeed()
+    private void FixedUpdate() 
     {
-        return speed;
+        Vector3 moveDownVector = new Vector3(horSpeed * Time.deltaTime, 0);
+
+        this.transform.position += moveDownVector;
     }
 
-    public void setSpeed(float newSpeed)
+    public float getHorSpeed()
     {
-        speed = newSpeed;
+        return horSpeed;
+    }
+    public float getVertSpeed()
+    {
+        return vertSpeed;
+    }
+    public float getSize()
+    {
+        return size;
+    }
+    public void setHorSpeed(float newSpeed)
+    {
+        horSpeed = newSpeed;
+    }
+    public void setVertSpeed(float newSpeed)
+    {
+        vertSpeed = newSpeed;
+    }
+    public void setSize(float newSize)
+    {
+        size = newSize;
     }
 }

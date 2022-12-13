@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 9143693534214455942}
   - component: {fileID: 9143693534214455943}
   - component: {fileID: 9143693534214455940}
-  - component: {fileID: 9143693534214455938}
+  - component: {fileID: -3778729249668178471}
   m_Layer: 0
-  m_Name: -VertSpeed
+  m_Name: +HorSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9811321, g: 0.6424588, b: 0.2443574, a: 1}
+  m_Color: {r: 0.93333334, g: 0.3768447, b: 0.28627446, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9143693534214455938
+--- !u!114 &-3778729249668178471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9143693534214455936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866d395514a6ae84abc6f0da3c3a42a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f915da31647da54582e51943e3a5f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 0.5
+  speedMultiplier: 2
+  maxSpeed: 10
+  minSpeed: 0.5

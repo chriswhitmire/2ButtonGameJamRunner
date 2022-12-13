@@ -13,14 +13,14 @@ public class ChangeHorSpeed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if(other.GetComponent<Player>().getSpeed() < maxSpeed && other.GetComponent<Player>().getSpeed() > minSpeed)
+            if(other.GetComponent<Player>().getHorSpeed() < maxSpeed && other.GetComponent<Player>().getHorSpeed() > minSpeed)
             {
                 // Debug.Log("collide");
-                float newSpeed = GetComponent<PlayerMovement>().getSpeed() * speedMultiplier;
+                float newSpeed = other.GetComponent<Player>().getHorSpeed() * speedMultiplier;
                 Debug.Log("New Speed: " + newSpeed);
                 
-                GetComponent<PlayerMovement>().setSpeed(newSpeed);
-                Debug.Log(other.gameObject.GetComponent<Player>().getSpeed());
+                other.GetComponent<Player>().setHorSpeed(newSpeed);
+                Debug.Log(other.gameObject.GetComponent<Player>().getHorSpeed());
 
                 setSpeedLimits(other);
             }
@@ -29,13 +29,13 @@ public class ChangeHorSpeed : MonoBehaviour
 
     void setSpeedLimits(Collider2D other)
     {
-        if(other.GetComponent<Player>().getSpeed() > maxSpeed)
+        if(other.GetComponent<Player>().getHorSpeed() > maxSpeed)
         {
-            other.GetComponent<Player>().setSpeed(maxSpeed);
+            other.GetComponent<Player>().setHorSpeed(maxSpeed);
         }
-        else if(other.GetComponent<Player>().getSpeed() < minSpeed)
+        else if(other.GetComponent<Player>().getHorSpeed() < minSpeed)
         {
-            other.GetComponent<Player>().setSpeed(minSpeed);
+            other.GetComponent<Player>().setHorSpeed(minSpeed);
         }
     }
 }

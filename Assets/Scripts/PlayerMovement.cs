@@ -9,25 +9,25 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 1;
 
 
-    private void Start() 
-    {
-        rb = this.GetComponent<Rigidbody2D>(); 
-    }
+     private void Start() 
+     {
+          rb = this.GetComponent<Rigidbody2D>(); 
+     }
 
-   private void FixedUpdate() 
-   {
-        Vector3 moveVector = new Vector3(speed*Time.deltaTime, 0);
+     // private void FixedUpdate() 
+     // {
+     //      Vector3 moveVector = new Vector3(speed*Time.deltaTime, 0);
 
-        this.transform.position += moveVector;
-   }
+     //      this.transform.position += moveVector;
+     // }
 
-   public float getSpeed()
-   {
-        return speed; 
-   }
+     public float getSpeed()
+     {
+          return speed; 
+     }
 
-   public void setSpeed(float newSpeed)
-   {
-        speed = newSpeed;
-   }
+     public void setSpeed(float newSpeed)
+     {
+          speed = newSpeed;
+     }
 }

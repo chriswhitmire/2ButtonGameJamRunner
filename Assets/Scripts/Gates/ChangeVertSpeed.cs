@@ -12,9 +12,9 @@ public class ChangeVertSpeed : MonoBehaviour
         if (other.tag == "Player")
         {
             // Debug.Log("collide");
-            float newSpeed = other.gameObject.GetComponent<Player>().getSpeed() * speedMultiplier;
+            float newSpeed = other.gameObject.GetComponent<Player>().getVertSpeed() * speedMultiplier;
             Debug.Log("New Player Speed: " + newSpeed);
-            other.gameObject.GetComponent<Player>().setSpeed(newSpeed);
+            other.gameObject.GetComponent<Player>().setVertSpeed(newSpeed);
         }    
     }
 }
