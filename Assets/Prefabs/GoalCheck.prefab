@@ -125,3 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalConditions: {fileID: 11400000, guid: becddd5f7c3404f49bf657cde653b77b, type: 2}
+  delayToNextLevel: 2
+  winSound: {fileID: 8300000, guid: d0d35f2fecbff024e812330a09049133, type: 3}
+  loseSound: {fileID: 8300000, guid: bc5b671ffa76c7a499c87a56016c42c1, type: 3}

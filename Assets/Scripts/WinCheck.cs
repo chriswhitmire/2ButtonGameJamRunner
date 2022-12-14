@@ -9,10 +9,17 @@ public class WinCheck : MonoBehaviour
     Player player;
     [SerializeField] GoalConditions goalConditions;
     [SerializeField] float delayToNextLevel = 2f;
+
+    [SerializeField] AudioClip winSound;
+    [SerializeField] AudioClip loseSound;
+
+    AudioSource audioSource;
     
     private void Start() 
     {
-        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();    
+        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
+
+        audioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();  
     }
 
    private void OnTriggerEnter2D(Collider2D other) 
@@ -32,11 +39,14 @@ public class WinCheck : MonoBehaviour
         {
             
             Invoke("proceedToNextLevel", delayToNextLevel);
+
+            audioSource?.PlayOneShot(winSound);
             Debug.Log("successsss");
         }
 
         else
         {
+            audioSource?.PlayOneShot(loseSound);
             Invoke("reloadLevel", delayToNextLevel);
             Debug.Log("fail");
         }
