@@ -8,12 +8,16 @@ public class ChangeHorSpeed : MonoBehaviour
     [SerializeField] float speedMultiplier = 1.0f;
     float maxSpeed = 10;
     float minSpeed = 0.5f;
+
+    DestroyPickup d;
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         Player player = p.GetComponent<Player>();
         maxSpeed = player.getMaxHorSpeed();
         minSpeed = player.getMinHorSpeed();
+
+        d = GetComponent<DestroyPickup>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -31,6 +35,7 @@ public class ChangeHorSpeed : MonoBehaviour
 
                 setSpeedLimits(other);
             }
+            d.destroyPickup();
         }    
     }
 

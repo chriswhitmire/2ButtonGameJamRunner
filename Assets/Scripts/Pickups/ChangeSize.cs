@@ -10,11 +10,15 @@ public class ChangeSize : MonoBehaviour
     float minSize;
     [SerializeField] bool hasChangedSize = false;
 
+    DestroyPickup d;
+
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         Player player = p.GetComponent<Player>();
         maxSize = player.getMaxSize();
         minSize = player.getMinSize();
+
+        d = GetComponent<DestroyPickup>();
     }
     
     private void OnTriggerEnter2D(Collider2D other) 
@@ -34,6 +38,7 @@ public class ChangeSize : MonoBehaviour
                 Debug.Log("ChangedSize");
                 Invoke("reset", 1);
             }
+            d.destroyPickup();
         }    
     }
 

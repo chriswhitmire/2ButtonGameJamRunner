@@ -8,12 +8,16 @@ public class ChangeVertSpeed : MonoBehaviour
     [SerializeField] float speedMultiplier = 1.0f;
     float maxSpeed = 10;
     float minSpeed = 0.5f;
+
+    DestroyPickup d;
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         Player player = p.GetComponent<Player>();
         maxSpeed = player.getMaxVertSpeed();
         minSpeed = player.getMinVertSpeed();
+        
+        d = GetComponent<DestroyPickup>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -25,5 +29,6 @@ public class ChangeVertSpeed : MonoBehaviour
             Debug.Log("New Player Speed: " + newSpeed);
             other.gameObject.GetComponent<Player>().setVertSpeed(newSpeed);
         }    
+        d.destroyPickup();
     }
 }
