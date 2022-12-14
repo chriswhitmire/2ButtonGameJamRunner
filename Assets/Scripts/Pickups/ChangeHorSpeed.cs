@@ -10,6 +10,9 @@ public class ChangeHorSpeed : MonoBehaviour
     float minSpeed = 0.5f;
 
     DestroyPickup d;
+    [SerializeField] ParticleSystem SpeedUpEffect;
+    [SerializeField] ParticleSystem SpeedDownEffect;
+    VFXManager vFXManager;
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -18,6 +21,7 @@ public class ChangeHorSpeed : MonoBehaviour
         minSpeed = player.getMinHorSpeed();
 
         d = GetComponent<DestroyPickup>();
+        vFXManager = GetComponent<VFXManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -34,6 +38,14 @@ public class ChangeHorSpeed : MonoBehaviour
                 Debug.Log(other.gameObject.GetComponent<Player>().getHorSpeed());
 
                 setSpeedLimits(other);
+            }
+
+            if(speedMultiplier > 1)
+            {
+                vFXManager.makeEffect(SpeedUpEffect, other.gameObject);
+            }
+            else{
+                vFXManager.makeEffect(SpeedDownEffect, other.gameObject);
             }
             d.destroyPickup();
         }    

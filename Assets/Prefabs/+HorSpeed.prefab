@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9143693534214455940}
   - component: {fileID: -3778729249668178471}
   - component: {fileID: 1817428690495154719}
-  - component: {fileID: -911756743780408963}
+  - component: {fileID: -4998376621017802954}
   m_Layer: 0
   m_Name: +HorSpeed
   m_TagString: Untagged
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 2
+  SpeedUpEffect: {fileID: 2360655870356088560, guid: 12feaef1d22f6484a963787c0731706d, type: 3}
+  SpeedDownEffect: {fileID: 5318118474938795682, guid: 4588b439e182d6d428ba26c149ca19e4, type: 3}
 --- !u!114 &1817428690495154719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842f578b824250447a7ded9d6de428b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-911756743780408963
+--- !u!114 &-4998376621017802954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,6 +172,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9143693534214455936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842f578b824250447a7ded9d6de428b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d81f94670d4dd247be71823cc23008c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

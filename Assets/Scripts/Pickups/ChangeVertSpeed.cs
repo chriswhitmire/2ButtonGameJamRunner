@@ -10,6 +10,9 @@ public class ChangeVertSpeed : MonoBehaviour
     float minSpeed = 0.5f;
 
     DestroyPickup d;
+    [SerializeField] ParticleSystem SpeedUpEffect;
+    [SerializeField] ParticleSystem SpeedDownEffect;
+    VFXManager vFXManager;
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -18,6 +21,7 @@ public class ChangeVertSpeed : MonoBehaviour
         minSpeed = player.getMinVertSpeed();
         
         d = GetComponent<DestroyPickup>();
+        vFXManager = GetComponent<VFXManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -29,6 +33,14 @@ public class ChangeVertSpeed : MonoBehaviour
             Debug.Log("New Player Speed: " + newSpeed);
             other.gameObject.GetComponent<Player>().setVertSpeed(newSpeed);
         }    
+        
+        if(speedMultiplier > 1)
+        {
+            vFXManager.makeEffect(SpeedUpEffect, other.gameObject);
+        }
+        else{
+            vFXManager.makeEffect(SpeedDownEffect, other.gameObject);
+        }
         d.destroyPickup();
     }
 }

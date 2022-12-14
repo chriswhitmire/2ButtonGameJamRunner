@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9143693534214455940}
   - component: {fileID: 9143693534214455938}
   - component: {fileID: 8253956748091154893}
+  - component: {fileID: 437623145873600642}
   m_Layer: 0
   m_Name: -VertSpeed
   m_TagString: Untagged
@@ -148,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 0.5
+  SpeedUpEffect: {fileID: 3802302459956397562, guid: 1854d346da968e94d8e69806dc1227fb, type: 3}
+  SpeedDownEffect: {fileID: 4425544509863617629, guid: e47052bb126785a4aac8b6b1d75d9c6a, type: 3}
 --- !u!114 &8253956748091154893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,5 +161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 842f578b824250447a7ded9d6de428b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &437623145873600642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143693534214455936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d81f94670d4dd247be71823cc23008c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
