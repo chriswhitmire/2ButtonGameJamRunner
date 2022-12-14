@@ -20,9 +20,8 @@ public class ChangeHorSpeed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if(other.GetComponent<Player>().getHorSpeed() < maxSpeed && other.GetComponent<Player>().getHorSpeed() > minSpeed)
+            if(other.GetComponent<Player>().getHorSpeed() <= maxSpeed && other.GetComponent<Player>().getHorSpeed() >= minSpeed)
             {
-                // Debug.Log("collide");
                 float newSpeed = other.GetComponent<Player>().getHorSpeed() * speedMultiplier;
                 Debug.Log("New Speed: " + newSpeed);
                 

@@ -190,7 +190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 677838228520707505, guid: 1f350a2ec11d1de43b64e9cdad5520ae, type: 3}
       propertyPath: sizeMultiplier
-      value: -2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 677838228520707510, guid: 1f350a2ec11d1de43b64e9cdad5520ae, type: 3}
       propertyPath: m_Name

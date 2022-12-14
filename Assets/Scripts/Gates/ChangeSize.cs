@@ -25,7 +25,7 @@ public class ChangeSize : MonoBehaviour
             {
                 other.gameObject.transform.localScale *= sizeMultiplier;
 
-                other.gameObject.GetComponent<Player>().setSize(other.gameObject.GetComponent<Player>().getSize()*sizeMultiplier);
+                other.gameObject.GetComponent<Player>().setSize(other.gameObject.transform.localScale.x);
 
                 setSizeLimits(other);
 

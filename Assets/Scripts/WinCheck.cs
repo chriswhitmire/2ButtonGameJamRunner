@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinCheck : MonoBehaviour
 {
     
     Player player;
     [SerializeField] GoalConditions goalConditions;
+    [SerializeField] float delayToNextLevel = 2f;
     
     private void Start() 
     {
@@ -22,13 +24,34 @@ public class WinCheck : MonoBehaviour
         }
    }
 
+ 
+
     private void checkWinConditions()
     {
         if (checkPlayerSize() && checkPlayerVertSpeed() && checkPlayerHorSpeed())
         {
-            // go to next scene
+            
+            Invoke("proceedToNextLevel", delayToNextLevel);
             Debug.Log("successsss");
         }
+
+        else
+        {
+            Invoke("reloadLevel", delayToNextLevel);
+            Debug.Log("fail");
+        }
+    }
+
+    private void proceedToNextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex+1);
+    }
+
+    private void reloadLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
 
