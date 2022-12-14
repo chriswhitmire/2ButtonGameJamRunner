@@ -8,8 +8,7 @@ public class ChangeSize : MonoBehaviour
     [SerializeField] float sizeMultiplier = 1.0f;
     float maxSize;
     float minSize;
-    [SerializeField] bool hasChangedSize = false;
-
+    
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         Player player = p.GetComponent<Player>();
@@ -20,7 +19,7 @@ public class ChangeSize : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         // Vector3 localScale = other.gameObject.transform.localScale;
-        if (other.tag == "Player" && !hasChangedSize)
+        if (other.tag == "Player")
         {
             if(other.gameObject.transform.localScale.x < maxSize && other.gameObject.transform.localScale.x > minSize)
             {
@@ -30,9 +29,7 @@ public class ChangeSize : MonoBehaviour
 
                 setSizeLimits(other);
 
-                hasChangedSize = true;
                 Debug.Log("ChangedSize");
-                Invoke("reset", 1);
             }
         }    
     }
@@ -49,8 +46,5 @@ public class ChangeSize : MonoBehaviour
         }
     }
 
-    void reset()
-    {
-        hasChangedSize = false;
-    }
+    
 }
