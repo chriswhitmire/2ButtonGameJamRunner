@@ -11,6 +11,9 @@ public class ChangeSize : MonoBehaviour
     [SerializeField] bool hasChangedSize = false;
 
     DestroyPickup d;
+    [SerializeField] ParticleSystem sizeUpEffect;
+    [SerializeField] ParticleSystem sizeDownEffect;
+    VFXManager vFXManager;
 
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -19,6 +22,7 @@ public class ChangeSize : MonoBehaviour
         minSize = player.getMinSize();
 
         d = GetComponent<DestroyPickup>();
+        vFXManager = GetComponent<VFXManager>();
     }
     
     private void OnTriggerEnter2D(Collider2D other) 
@@ -37,6 +41,14 @@ public class ChangeSize : MonoBehaviour
                 hasChangedSize = true;
                 Debug.Log("ChangedSize");
                 Invoke("reset", 1);
+            }
+
+            if(sizeMultiplier > 1)
+            {
+                vFXManager.makeEffect(sizeUpEffect, other.gameObject);
+            }
+            else{
+                vFXManager.makeEffect(sizeDownEffect, other.gameObject);
             }
             d.destroyPickup();
         }    
