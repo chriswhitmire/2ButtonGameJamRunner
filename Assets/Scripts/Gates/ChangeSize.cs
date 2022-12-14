@@ -26,13 +26,14 @@ public class ChangeSize : MonoBehaviour
             {
                 other.gameObject.transform.localScale *= sizeMultiplier;
 
+                other.gameObject.GetComponent<Player>().setSize(other.gameObject.GetComponent<Player>().getSize()*sizeMultiplier);
+
                 setSizeLimits(other);
 
                 hasChangedSize = true;
                 Debug.Log("ChangedSize");
                 Invoke("reset", 1);
             }
-            
         }    
     }
 
