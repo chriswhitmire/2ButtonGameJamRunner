@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2253879259583159767}
   - component: {fileID: 2253879259583159764}
   - component: {fileID: 2253879259583159765}
+  - component: {fileID: 2146637942845637831}
   m_Layer: 0
   m_Name: GoalCheck
   m_TagString: Untagged
@@ -125,3 +126,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalConditions: {fileID: 11400000, guid: becddd5f7c3404f49bf657cde653b77b, type: 2}
+  winEffect: {fileID: 9157105887693468085, guid: 6fe6260118113dc4ba02257b7e51708b, type: 3}
+  failEffect: {fileID: 5985634496115995770, guid: bb3af37762c530642af79b57d60aa0c8, type: 3}
+--- !u!114 &2146637942845637831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253879259583159760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d81f94670d4dd247be71823cc23008c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
