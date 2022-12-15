@@ -52,13 +52,8 @@ public class WinCheck : MonoBehaviour
         {
             Debug.Log("FAIL");
             vFXManager.makeEffect(failEffect, other.gameObject);
-        }
-
-        else
-        {
             audioSource?.PlayOneShot(loseSound);
             Invoke("reloadLevel", delayToNextLevel);
-            Debug.Log("fail");
         }
     }
 
