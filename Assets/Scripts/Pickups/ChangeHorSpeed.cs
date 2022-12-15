@@ -16,7 +16,7 @@ public class ChangeHorSpeed : MonoBehaviour
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
-        Player player = p.GetComponent<Player>();
+        Player player = p.GetComponentInChildren<Player>();
         maxSpeed = player.getMaxHorSpeed();
         minSpeed = player.getMinHorSpeed();
 
@@ -28,13 +28,15 @@ public class ChangeHorSpeed : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if(other.GetComponent<Player>().getHorSpeed() <= maxSpeed && other.GetComponent<Player>().getHorSpeed() >= minSpeed)
+            Debug.Log("hit");
+            // Player playerScript = other.GetComponentInChildren<Player>();
+            if(other.GetComponentInChildren<Player>().getHorSpeed() <= maxSpeed && other.GetComponentInChildren<Player>().getHorSpeed() >= minSpeed)
             {
-                float newSpeed = other.GetComponent<Player>().getHorSpeed() * speedMultiplier;
+                float newSpeed = other.GetComponentInChildren<Player>().getHorSpeed() * speedMultiplier;
                 Debug.Log("New Speed: " + newSpeed);
                 
-                other.GetComponent<Player>().setHorSpeed(newSpeed);
-                Debug.Log(other.gameObject.GetComponent<Player>().getHorSpeed());
+                other.GetComponentInChildren<Player>().setHorSpeed(newSpeed);
+                Debug.Log(other.gameObject.GetComponentInChildren<Player>().getHorSpeed());
 
                 setSpeedLimits(other);
             }
@@ -52,13 +54,13 @@ public class ChangeHorSpeed : MonoBehaviour
 
     void setSpeedLimits(Collider2D other)
     {
-        if(other.GetComponent<Player>().getHorSpeed() > maxSpeed)
+        if(other.GetComponentInChildren<Player>().getHorSpeed() > maxSpeed)
         {
-            other.GetComponent<Player>().setHorSpeed(maxSpeed);
+            other.GetComponentInChildren<Player>().setHorSpeed(maxSpeed);
         }
-        else if(other.GetComponent<Player>().getHorSpeed() < minSpeed)
+        else if(other.GetComponentInChildren<Player>().getHorSpeed() < minSpeed)
         {
-            other.GetComponent<Player>().setHorSpeed(minSpeed);
+            other.GetComponentInChildren<Player>().setHorSpeed(minSpeed);
         }
     }
 }

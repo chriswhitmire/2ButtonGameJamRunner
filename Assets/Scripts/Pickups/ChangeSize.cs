@@ -16,7 +16,7 @@ public class ChangeSize : MonoBehaviour
 
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
-        Player player = p.GetComponent<Player>();
+        Player player = p.GetComponentInChildren<Player>();
         maxSize = player.getMaxSize();
         minSize = player.getMinSize();
 
@@ -33,7 +33,7 @@ public class ChangeSize : MonoBehaviour
             {
                 other.gameObject.transform.localScale *= sizeMultiplier;
 
-                other.gameObject.GetComponent<Player>().setSize(other.gameObject.transform.localScale.x);
+                other.gameObject.GetComponentInChildren<Player>().setSize(other.gameObject.transform.localScale.x);
 
                 setSizeLimits(other);
 
@@ -53,13 +53,13 @@ public class ChangeSize : MonoBehaviour
 
     void setSizeLimits(Collider2D other)
     {
-        if(other.gameObject.transform.localScale.x > maxSize)
+        if(other.GetComponentInChildren<Player>().getSize() > maxSize)
         {
-            other.gameObject.transform.localScale = new Vector3(maxSize,maxSize,maxSize);
+            other.GetComponentInChildren<Player>().setSize(maxSize);
         }
-        else if(other.gameObject.transform.localScale.x < 0.5f)
+        else if(other.GetComponentInChildren<Player>().getSize() < minSize)
         {
-            other.gameObject.transform.localScale = new Vector3(minSize,minSize,minSize);
+            other.GetComponentInChildren<Player>().setSize(minSize);
         }
     }
 

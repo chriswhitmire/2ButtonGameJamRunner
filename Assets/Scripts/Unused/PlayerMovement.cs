@@ -5,29 +5,32 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    Rigidbody2D rb;
-    [SerializeField] float speed = 1;
-
+//     Rigidbody2D rb;
+    Player player;
+//     float horSpeed;
+//     float vertSpeed;
 
      private void Start() 
      {
-          rb = this.GetComponent<Rigidbody2D>(); 
+          player = GetComponentInChildren<Player>();
+          // horSpeed = player.getHorSpeed();
+          // vertSpeed = player.getVertSpeed();
+          // rb = this.GetComponent<Rigidbody2D>(); 
      }
 
-     // private void FixedUpdate() 
-     // {
-     //      Vector3 moveVector = new Vector3(speed*Time.deltaTime, 0);
-
-     //      this.transform.position += moveVector;
-     // }
-
-     public float getSpeed()
+     private void Update() 
      {
-          return speed; 
+          float moveUpDir = Input.GetAxisRaw("Vertical");
+
+          Vector3 moveUpVector = new Vector3(0, moveUpDir * player.getVertSpeed() * Time.fixedDeltaTime);
+
+          transform.position += moveUpVector;
      }
 
-     public void setSpeed(float newSpeed)
+     private void FixedUpdate() 
      {
-          speed = newSpeed;
+        Vector3 moveDownVector = new Vector3(player.getHorSpeed() * Time.deltaTime, 0);
+
+        this.transform.position += moveDownVector;
      }
 }

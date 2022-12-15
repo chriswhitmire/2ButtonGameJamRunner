@@ -16,7 +16,7 @@ public class ChangeVertSpeed : MonoBehaviour
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
-        Player player = p.GetComponent<Player>();
+        Player player = p.GetComponentInChildren<Player>();
         maxSpeed = player.getMaxVertSpeed();
         minSpeed = player.getMinVertSpeed();
         
@@ -29,9 +29,9 @@ public class ChangeVertSpeed : MonoBehaviour
         if (other.tag == "Player")
         {
             // Debug.Log("collide");
-            float newSpeed = other.gameObject.GetComponent<Player>().getVertSpeed() * speedMultiplier;
+            float newSpeed = other.gameObject.GetComponentInChildren<Player>().getVertSpeed() * speedMultiplier;
             Debug.Log("New Player Speed: " + newSpeed);
-            other.gameObject.GetComponent<Player>().setVertSpeed(newSpeed);
+            other.gameObject.GetComponentInChildren<Player>().setVertSpeed(newSpeed);
         }    
         
         if(speedMultiplier > 1)

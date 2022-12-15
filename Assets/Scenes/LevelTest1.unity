@@ -691,9 +691,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604004, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604007, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604007, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2078258863
+      objectReference: {fileID: 0}
     - target: {fileID: 6061557828409732720, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061557828409732720, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101481911231729587, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}

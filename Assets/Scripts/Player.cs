@@ -27,21 +27,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        float moveUpDir = Input.GetAxisRaw("Vertical");
-
-        Vector3 moveUpVector = new Vector3(0, moveUpDir * vertSpeed * Time.fixedDeltaTime);
-
-        transform.position += moveUpVector;
         // for later
         // animator.SetFloat("VerticalSpeed", movement.y);
         // animator.SetFloat("Speed", movement.sqrMagnitude);
-    }
-
-    private void FixedUpdate() 
-    {
-        Vector3 moveDownVector = new Vector3(horSpeed * Time.deltaTime, 0);
-
-        this.transform.position += moveDownVector;
     }
 
     // HORIZONTAL

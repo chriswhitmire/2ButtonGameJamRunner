@@ -45,6 +45,6 @@ TagManager:
   - name: Player
     uniqueID: 2078258863
     locked: 0
-  - name: FinishVFX
+  - name: VFX
     uniqueID: 1783696997
     locked: 0
