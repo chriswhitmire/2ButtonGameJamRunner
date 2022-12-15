@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2253879259583159767}
   - component: {fileID: 2253879259583159764}
   - component: {fileID: 2253879259583159765}
+  - component: {fileID: 2146637942845637831}
   m_Layer: 0
   m_Name: GoalCheck
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2253879259583159760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.22, y: 2.24, z: 0}
-  m_LocalScale: {x: 1, y: 3.7325, z: 1}
+  m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -128,3 +129,17 @@ MonoBehaviour:
   delayToNextLevel: 2
   winSound: {fileID: 8300000, guid: d0d35f2fecbff024e812330a09049133, type: 3}
   loseSound: {fileID: 8300000, guid: bc5b671ffa76c7a499c87a56016c42c1, type: 3}
+  winEffect: {fileID: 9157105887693468085, guid: 6fe6260118113dc4ba02257b7e51708b, type: 3}
+  failEffect: {fileID: 5985634496115995770, guid: bb3af37762c530642af79b57d60aa0c8, type: 3}
+--- !u!114 &2146637942845637831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253879259583159760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d81f94670d4dd247be71823cc23008c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

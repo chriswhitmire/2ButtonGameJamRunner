@@ -14,11 +14,17 @@ public class WinCheck : MonoBehaviour
     [SerializeField] AudioClip loseSound;
 
     AudioSource audioSource;
-    
+
+      [SerializeField] ParticleSystem winEffect;
+    [SerializeField] ParticleSystem failEffect;
+    VFXManager vFXManager;
+        
+  
+
     private void Start() 
     {
-        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
-
+        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();    
+        vFXManager = GetComponent<VFXManager>();
         audioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();  
     }
 
@@ -27,13 +33,11 @@ public class WinCheck : MonoBehaviour
         if (other.gameObject.tag == "Player")
         { 
             Debug.Log("Collision registered");
-            checkWinConditions();
+            checkWinConditions(other);
         }
    }
 
- 
-
-    private void checkWinConditions()
+    private void checkWinConditions(Collider2D other)
     {
         if (checkPlayerSize() && checkPlayerVertSpeed() && checkPlayerHorSpeed())
         {
@@ -42,6 +46,12 @@ public class WinCheck : MonoBehaviour
 
             audioSource?.PlayOneShot(winSound);
             Debug.Log("successsss");
+            vFXManager.makeEffect(winEffect, other.gameObject);
+        }
+        else
+        {
+            Debug.Log("FAIL");
+            vFXManager.makeEffect(failEffect, other.gameObject);
         }
 
         else
