@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87a990d57ba60f24a9c801c76ae8dcb6, type: 3}
-  m_Name: 2
+  m_Name: 4
   m_EditorClassIdentifier: 
-  minPlayerSize: 0
-  maxPlayerSize: 9999
+  minPlayerSize: 1
+  maxPlayerSize: 1
   minPlayerVertSpeed: 0
   maxPlayerVertSpeed: 9999
   minPlayerHoriSpeed: 16
