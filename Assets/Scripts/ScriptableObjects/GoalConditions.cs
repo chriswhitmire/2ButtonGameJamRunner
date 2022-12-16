@@ -18,5 +18,7 @@ public class GoalConditions : ScriptableObject
 
     public float maxPlayerHoriSpeed = 9999;
 
+    public bool cameraIsShaking = false;
+
 
 }
