@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class EndScreen : MonoBehaviour
 {
+    private void Start() 
+    {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
+    }
     public void level1(){SceneManager.LoadScene("Level 1");}
     public void level2(){SceneManager.LoadScene("Level 2");}
     public void level3(){SceneManager.LoadScene("Level 3");}
