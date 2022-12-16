@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
     Vector2 movement;
+    CinemachineVirtualCamera cinemachineVC;
+    bool shouldShake = false;
+
     [SerializeField] float horSpeed = 1;
     [SerializeField] float vertSpeed = 1;
     [SerializeField] float size = 1;
@@ -15,10 +19,16 @@ public class Player : MonoBehaviour
     [SerializeField] float minVertSpeed = 0.5f;
     [SerializeField] float maxSize = 4;
     [SerializeField] float minSize = 0.5f;
+    [SerializeField] float shakeIntensity = 2f;
     
     // for later
     Animator animator;
     
+    private void Awake() 
+    {
+        cinemachineVC = GetComponentInChildren<CinemachineVirtualCamera>();    
+    }
+
     void Start()
     {
         GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
@@ -29,6 +39,7 @@ public class Player : MonoBehaviour
         // for later
         // animator.SetFloat("VerticalSpeed", movement.y);
         // animator.SetFloat("Speed", movement.sqrMagnitude);
+        ShakeCamera();
     }
 
     // HORIZONTAL
@@ -83,5 +94,30 @@ public class Player : MonoBehaviour
     public void setSize(float newSize)
     {
         size = newSize;
+    }
+
+    public void setShouldShake(bool newShouldShake)
+    {
+        shouldShake = newShouldShake;
+    }
+
+    public bool getShouldShake()
+    {
+        return shouldShake;
+    }
+
+    void ShakeCamera()
+    {
+        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
+            cinemachineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+        if (shouldShake)
+        {
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = shakeIntensity;
+        }
+        else
+        {
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0.0f;
+        }
     }
 }
