@@ -15,15 +15,13 @@ public class WinCheck : MonoBehaviour
 
     AudioSource audioSource;
 
-      [SerializeField] ParticleSystem winEffect;
+    [SerializeField] ParticleSystem winEffect;
     [SerializeField] ParticleSystem failEffect;
     VFXManager vFXManager;
-        
-  
 
     private void Start() 
     {
-        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();    
+        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<Player>();    
         vFXManager = GetComponent<VFXManager>();
         audioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();  
     }
