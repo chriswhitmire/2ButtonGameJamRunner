@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalConditions: {fileID: 11400000, guid: becddd5f7c3404f49bf657cde653b77b, type: 2}
   delayToNextLevel: 2
-  winSound: {fileID: 8300000, guid: d0d35f2fecbff024e812330a09049133, type: 3}
+  winSound: {fileID: 8300000, guid: d856a278f3b295b478a5eaf595982b7f, type: 3}
   loseSound: {fileID: 8300000, guid: 32b1b493f4491024f9d93d8c42cc81ae, type: 3}
   winEffect: {fileID: 9157105887693468085, guid: 6fe6260118113dc4ba02257b7e51708b, type: 3}
   failEffect: {fileID: 5985634496115995770, guid: bb3af37762c530642af79b57d60aa0c8, type: 3}
