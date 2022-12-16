@@ -16,5 +16,5 @@ MonoBehaviour:
   maxPlayerSize: 9999
   minPlayerVertSpeed: 0
   maxPlayerVertSpeed: 9999
-  minPlayerHoriSpeed: 16
-  maxPlayerHoriSpeed: 16
+  minPlayerHoriSpeed: 32
+  maxPlayerHoriSpeed: 32
