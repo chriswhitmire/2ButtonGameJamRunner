@@ -331,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoalCheck
       objectReference: {fileID: 0}
+    - target: {fileID: 2253879259583159765, guid: 23ec56c088964ad4eab47ac8cd0bb21a, type: 3}
+      propertyPath: goalConditions
+      value: 
+      objectReference: {fileID: 11400000, guid: 5cc817ee4ed92354582a3e4501d7260b, type: 2}
     - target: {fileID: 2253879259583159766, guid: 23ec56c088964ad4eab47ac8cd0bb21a, type: 3}
       propertyPath: m_RootOrder
       value: 3

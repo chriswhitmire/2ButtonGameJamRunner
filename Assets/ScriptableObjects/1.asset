@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a990d57ba60f24a9c801c76ae8dcb6, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  minPlayerSize: 0
-  maxPlayerSize: 8
+  minPlayerSize: 0.5
+  maxPlayerSize: 0.5
   minPlayerVertSpeed: 0
   maxPlayerVertSpeed: 64
   minPlayerHoriSpeed: 0
