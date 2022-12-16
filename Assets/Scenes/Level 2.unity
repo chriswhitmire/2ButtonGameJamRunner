@@ -301,6 +301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2906771148214082048, guid: 92728ca7d1ad531458392b4589ca48b0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 49e812c5f650cea4d84474d7edd39f19, type: 2}
     - target: {fileID: 9143693534214455936, guid: 92728ca7d1ad531458392b4589ca48b0, type: 3}
       propertyPath: m_Name
       value: +HorSpeed
