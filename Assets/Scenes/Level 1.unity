@@ -232,6 +232,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604004, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604025, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: maxSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604025, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: minSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504846900618604025, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: vertSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2832213659004823129, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_GravityScale
       value: 0

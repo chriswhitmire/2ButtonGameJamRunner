@@ -31,9 +31,10 @@ public class ChangeSize : MonoBehaviour
         {
             if(other.GetComponentInChildren<Player>().getSize() < maxSize && other.GetComponentInChildren<Player>().getSize() > minSize)
             {
-                float curSize = GetComponentInChildren<Player>().getSize();
+                float curSize = other.GetComponentInChildren<Player>().getSize();
+                Debug.Log(curSize);
                 float newSize = curSize *= sizeMultiplier;
-                // other.gameObject.transform.localScale *= sizeMultiplier;
+                other.gameObject.transform.localScale *= sizeMultiplier;
 
                 other.GetComponentInChildren<Player>().setSize(newSize);
 
