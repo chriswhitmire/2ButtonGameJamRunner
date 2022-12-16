@@ -32,5 +32,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDownVector = new Vector3(player.getHorSpeed() * Time.deltaTime, 0);
 
         this.transform.position += moveDownVector;
+
+        float clampedY = Mathf.Clamp(this.transform.position.y, -3, 3);
+
+        this.transform.position = new Vector3(this.transform.position.x, clampedY, this.transform.position.z);
      }
 }
