@@ -6,6 +6,6 @@ public class VFXManager : MonoBehaviour
 {
     public void makeEffect(ParticleSystem particle, GameObject otherGameObject)
     {
-        // Instantiate(particle, otherGameObject.transform);
+        Instantiate(particle, otherGameObject.transform);
     }
 }

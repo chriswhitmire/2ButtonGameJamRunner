@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4d9dcfcd52d8544b14b83bea9e4332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScreenShakeEffect: {fileID: 0}
-  stoppingScreenShakeEffect: {fileID: 0}
+  startingScreenShakeEffect: {fileID: 4425129568604114668, guid: 244a139da2299af47a5734e8e399df9c, type: 3}
+  stoppingScreenShakeEffect: {fileID: 4425129568604114668, guid: 244a139da2299af47a5734e8e399df9c, type: 3}
 --- !u!114 &3948252832835282471
 MonoBehaviour:
   m_ObjectHideFlags: 0

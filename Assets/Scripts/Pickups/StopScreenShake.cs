@@ -7,8 +7,8 @@ public class StopScreenShake : MonoBehaviour
 {
     
     DestroyPickup d;
-    // [SerializeField] ParticleSystem startingScreenShakeEffect;
-    // [SerializeField] ParticleSystem stoppingScreenShakeEffect;
+    [SerializeField] ParticleSystem startingScreenShakeEffect;
+    [SerializeField] ParticleSystem stoppingScreenShakeEffect;
     VFXManager vFXManager;
 
     private void Start() {
@@ -28,13 +28,13 @@ public class StopScreenShake : MonoBehaviour
             other.GetComponentInChildren<Player>().setShouldShake(false);
 
 
-            // if(other.GetComponentInChildren<Player>().getShouldShake())
-            // {
-            //     vFXManager.makeEffect(startingScreenShakeEffect, other.gameObject);
-            // }
-            // else{
-            //     vFXManager.makeEffect(stoppingScreenShakeEffect, other.gameObject);
-            // }
+            if(other.GetComponentInChildren<Player>().getShouldShake())
+            {
+                vFXManager.makeEffect(startingScreenShakeEffect, other.gameObject);
+            }
+            else{
+                vFXManager.makeEffect(stoppingScreenShakeEffect, other.gameObject);
+            }
             d.destroyPickup();
         }    
     }
