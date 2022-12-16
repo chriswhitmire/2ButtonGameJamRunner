@@ -29,12 +29,12 @@ public class ChangeSize : MonoBehaviour
         // Vector3 localScale = other.gameObject.transform.localScale;
         if (other.tag == "Player")
         {
-            if(other.GetComponentInChildren<Player>().getSize() < maxSize && other.GetComponentInChildren<Player>().getSize() > minSize)
+            if(other.GetComponentInChildren<Player>().getSize() <= maxSize && other.GetComponentInChildren<Player>().getSize() >= minSize)
             {
                 float curSize = other.GetComponentInChildren<Player>().getSize();
                 Debug.Log(curSize);
-                float newSize = curSize *= sizeMultiplier;
-                other.gameObject.transform.localScale *= sizeMultiplier;
+                float newSize = curSize * sizeMultiplier;
+                other.gameObject.transform.localScale = new Vector3(newSize, newSize, newSize);//*= sizeMultiplier;
 
                 other.GetComponentInChildren<Player>().setSize(newSize);
 

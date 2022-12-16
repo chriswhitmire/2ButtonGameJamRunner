@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a990d57ba60f24a9c801c76ae8dcb6, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
-  minPlayerSize: 1
-  maxPlayerSize: 1
-  minPlayerVertSpeed: 0
-  maxPlayerVertSpeed: 9999
-  minPlayerHoriSpeed: 16
-  maxPlayerHoriSpeed: 16
-  cameraIsShaking: 0
+  minPlayerSize: 0.25
+  maxPlayerSize: 0.25
+  minPlayerVertSpeed: 8
+  maxPlayerVertSpeed: 8
+  minPlayerHoriSpeed: 4
+  maxPlayerHoriSpeed: 4
+  cameraIsShaking: 1

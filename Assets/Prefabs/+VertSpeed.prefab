@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866d395514a6ae84abc6f0da3c3a42a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 2
+  speedMultiplier: 5
   SpeedUpEffect: {fileID: 3802302459956397562, guid: 1854d346da968e94d8e69806dc1227fb, type: 3}
   SpeedDownEffect: {fileID: 4425544509863617629, guid: e47052bb126785a4aac8b6b1d75d9c6a, type: 3}
 --- !u!114 &7448554898666509080

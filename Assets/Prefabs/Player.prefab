@@ -107,7 +107,7 @@ MonoBehaviour:
   minHorSpeed: 0.5
   maxVertSpeed: 10
   minVertSpeed: 0.5
-  maxSize: 64
+  maxSize: 2.5
   minSize: 0.25
   shakeIntensity: 20
 --- !u!95 &2305152870343006470
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 4.5, y: 0, z: -10}
+  m_FollowOffset: {x: 7.5, y: 0, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
