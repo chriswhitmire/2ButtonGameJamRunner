@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2080721914457732791, guid: 2c3578c5c832585458efe4dd8d28923a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2080721914457732791, guid: 2c3578c5c832585458efe4dd8d28923a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -244,10 +244,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3661647518209454371, guid: 538d982f7b791c74cbaffe4684bedc02, type: 3}
-      propertyPath: speedMultiplier
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3661647518209454393, guid: 538d982f7b791c74cbaffe4684bedc02, type: 3}
       propertyPath: m_Name
       value: +VertSpeed
@@ -319,7 +315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 677838228520707519, guid: 1f350a2ec11d1de43b64e9cdad5520ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 677838228520707519, guid: 1f350a2ec11d1de43b64e9cdad5520ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -734,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943145729329075871, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 2305152870343006465, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: maxHorSpeed
@@ -746,7 +742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305152871799985144, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 3786842683387040364, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_RootOrder

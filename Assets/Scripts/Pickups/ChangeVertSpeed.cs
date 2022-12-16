@@ -31,16 +31,16 @@ public class ChangeVertSpeed : MonoBehaviour
             // Debug.Log("collide");
             float newSpeed = other.gameObject.GetComponentInChildren<Player>().getVertSpeed() * speedMultiplier;
             Debug.Log("New Player Speed: " + newSpeed);
-            other.gameObject.GetComponentInChildren<Player>().setVertSpeed(newSpeed);
-        }    
+            other.gameObject.GetComponentInChildren<Player>().setVertSpeed(newSpeed);    
         
-        if(speedMultiplier > 1)
-        {
-            vFXManager.makeEffect(SpeedUpEffect, other.gameObject);
+            if(speedMultiplier > 1)
+            {
+                vFXManager.makeEffect(SpeedUpEffect, other.gameObject);
+            }
+            else{
+                vFXManager.makeEffect(SpeedDownEffect, other.gameObject);
+            }
+            d.destroyPickup();
         }
-        else{
-            vFXManager.makeEffect(SpeedDownEffect, other.gameObject);
-        }
-        d.destroyPickup();
     }
 }
