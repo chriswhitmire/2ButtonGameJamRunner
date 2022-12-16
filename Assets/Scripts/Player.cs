@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rb;
     Vector2 movement;
     [SerializeField] float horSpeed = 1;
     [SerializeField] float vertSpeed = 1;
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
     
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>(); 
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 
     void Update()
