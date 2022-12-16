@@ -37,7 +37,7 @@ public class WinCheck : MonoBehaviour
 
     private void checkWinConditions(Collider2D other)
     {
-        if (checkPlayerSize() && checkPlayerVertSpeed() && checkPlayerHorSpeed())
+        if (checkPlayerSize() && checkPlayerVertSpeed() && checkPlayerHorSpeed() && checkIfScreenIsShaking())
         {
             
             Invoke("proceedToNextLevel", delayToNextLevel);
@@ -91,6 +91,11 @@ public class WinCheck : MonoBehaviour
         }
 
         return false;
+    }
+
+    bool checkIfScreenIsShaking()
+    {
+        return player.getShouldShake() == goalConditions.cameraIsShaking;
     }
 
 }
