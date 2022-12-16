@@ -781,6 +781,14 @@ PrefabInstance:
       propertyPath: minHorSpeed
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2305152870343006465, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: maxHorSpeed
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305152870343006465, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
+      propertyPath: minHorSpeed
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3786842683387040364, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_RootOrder
       value: 0
