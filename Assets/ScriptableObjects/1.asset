@@ -18,3 +18,4 @@ MonoBehaviour:
   maxPlayerVertSpeed: 64
   minPlayerHoriSpeed: 0
   maxPlayerHoriSpeed: 64
+  cameraIsShaking: 0
