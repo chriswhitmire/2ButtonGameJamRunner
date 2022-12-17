@@ -42,7 +42,7 @@ public class ChangeHorSpeed : MonoBehaviour
                 Debug.Log("New Speed: " + newSpeed);
                 
                 other.GetComponentInChildren<Player>().setHorSpeed(newSpeed);
-                Debug.Log(other.gameObject.GetComponentInChildren<Player>().getHorSpeed());
+                // Debug.Log(other.gameObject.GetComponentInChildren<Player>().getHorSpeed());
 
                 setSpeedLimits(other);
             }

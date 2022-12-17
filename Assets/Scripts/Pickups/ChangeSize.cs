@@ -38,15 +38,15 @@ public class ChangeSize : MonoBehaviour
             if(other.GetComponentInChildren<Player>().getSize() <= maxSize && other.GetComponentInChildren<Player>().getSize() >= minSize)
             {
                 float curSize = other.GetComponentInChildren<Player>().getSize();
-                Debug.Log(curSize);
+                // Debug.Log(curSize);
                 float newSize = curSize * sizeMultiplier;
-                other.gameObject.transform.localScale = new Vector3(newSize, newSize, newSize);//*= sizeMultiplier;
+                // other.gameObject.transform.localScale = new Vector3(newSize, newSize, newSize);//*= sizeMultiplier;
 
-                other.GetComponentInChildren<Player>().setSize(newSize);
+                other.GetComponentInChildren<Player>().setSize(newSize, other);
 
                 setSizeLimits(other);
 
-                Debug.Log("ChangedSize");
+                // Debug.Log("ChangedSize");
             }
 
             if(sizeMultiplier > 1)
@@ -66,11 +66,11 @@ public class ChangeSize : MonoBehaviour
     {
         if(other.GetComponentInChildren<Player>().getSize() > maxSize)
         {
-            other.GetComponentInChildren<Player>().setSize(maxSize);
+            other.GetComponentInChildren<Player>().setSize(maxSize, other);
         }
         else if(other.GetComponentInChildren<Player>().getSize() < minSize)
         {
-            other.GetComponentInChildren<Player>().setSize(minSize);
+            other.GetComponentInChildren<Player>().setSize(minSize,other);
         }
     }
 

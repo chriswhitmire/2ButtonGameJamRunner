@@ -30,13 +30,16 @@ public class WinCheck : MonoBehaviour
    {
         if (other.gameObject.tag == "Player")
         { 
-            Debug.Log("Collision registered");
+            // Debug.Log("Collision registered");
             checkWinConditions(other);
         }
    }
 
     private void checkWinConditions(Collider2D other)
     {
+        Debug.Log("Final Size: " + other.gameObject.GetComponentInChildren<Player>().getSize());
+        Debug.Log("Final HorSpeed: " + other.gameObject.GetComponentInChildren<Player>().getHorSpeed());
+        Debug.Log("Final VertSpeed: " + other.gameObject.GetComponentInChildren<Player>().getVertSpeed());
         if (checkPlayerSize() && checkPlayerVertSpeed() && checkPlayerHorSpeed() && checkIfScreenIsShaking())
         {
             

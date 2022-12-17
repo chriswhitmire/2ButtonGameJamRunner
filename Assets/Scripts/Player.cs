@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     public void setHorSpeed(float newSpeed)
     {
         horSpeed = newSpeed;
+        Debug.Log("Hor Speed: " + horSpeed);
     }
 
     // VERTICAL
@@ -76,6 +77,7 @@ public class Player : MonoBehaviour
     public void setVertSpeed(float newSpeed)
     {
         vertSpeed = newSpeed;
+        Debug.Log("Vert Speed: " + vertSpeed);
     }
 
     // SIZE
@@ -91,9 +93,11 @@ public class Player : MonoBehaviour
     {
         return maxSize;
     }
-    public void setSize(float newSize)
+    public void setSize(float newSize, Collider2D other)
     {
         size = newSize;
+        other.gameObject.transform.localScale = new Vector3(newSize, newSize, newSize);//*= sizeMultiplier;
+        Debug.Log("Size: "+ size);
     }
 
     public void setShouldShake(bool newShouldShake)
