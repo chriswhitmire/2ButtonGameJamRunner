@@ -431,11 +431,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_lineSpacing
-      value: -33.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontSizeBase
       value: 83.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377748372720772054, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 7613130119616243913, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_Name

@@ -544,15 +544,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontSize
-      value: 100
+      value: 146
       objectReference: {fileID: 0}
+    - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d183145e11b0fd14b8c2c42514cfc68b, type: 2}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontStyle
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontSizeBase
-      value: 100
+      value: 146
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7802046047516914870, guid: d183145e11b0fd14b8c2c42514cfc68b, type: 2}
+    - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 255ff4163e2f5b24f934bcbb23dd03bd, type: 2}
+    - target: {fileID: 4377748372720772054, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 7613130119616243913, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_Name
@@ -1092,7 +1112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943145729329075871, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.75
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 1943145729329075871, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1108,7 +1128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305152871799985144, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.75
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 2305152871799985144, guid: 82a9800126a4b014b9344e4e7dbf3160, type: 3}
       propertyPath: m_LocalPosition.y

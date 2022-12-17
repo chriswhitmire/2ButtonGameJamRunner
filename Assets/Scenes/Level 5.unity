@@ -1173,7 +1173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2075909193159117191, guid: e806c531e5adc734db56a091678afcd4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2075909193159117191, guid: e806c531e5adc734db56a091678afcd4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1362,15 +1362,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontSize
-      value: 95
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_lineSpacing
-      value: -31.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3279372961395162654, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_fontSizeBase
-      value: 95
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377748372720772054, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 7613130119616243913, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_Name
@@ -1386,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7613130119616243917, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7613130119616243917, guid: 5c5e6abeb5591f44c847b57a4393cda4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1479,7 +1483,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2ef78d6f5b62ea4458dfc3c9e4e98e80, type: 2}
     - target: {fileID: 2253879259583159766, guid: 23ec56c088964ad4eab47ac8cd0bb21a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2253879259583159766, guid: 23ec56c088964ad4eab47ac8cd0bb21a, type: 3}
       propertyPath: m_LocalScale.x
