@@ -13,6 +13,11 @@ public class ChangeVertSpeed : MonoBehaviour
     [SerializeField] ParticleSystem SpeedUpEffect;
     [SerializeField] ParticleSystem SpeedDownEffect;
     VFXManager vFXManager;
+
+    [SerializeField] AudioClip speedUp;
+    [SerializeField] AudioClip slowDown;
+
+    AudioSource audioSource;
     
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -22,6 +27,7 @@ public class ChangeVertSpeed : MonoBehaviour
         
         d = GetComponent<DestroyPickup>();
         vFXManager = GetComponent<VFXManager>();
+        audioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();  
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -36,9 +42,11 @@ public class ChangeVertSpeed : MonoBehaviour
             if(speedMultiplier > 1)
             {
                 vFXManager.makeEffect(SpeedUpEffect, other.gameObject);
+                audioSource?.PlayOneShot(speedUp);
             }
             else{
                 vFXManager.makeEffect(SpeedDownEffect, other.gameObject);
+                audioSource?.PlayOneShot(slowDown);
             }
             d.destroyPickup();
         }

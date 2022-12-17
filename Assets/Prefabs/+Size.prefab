@@ -172,6 +172,8 @@ MonoBehaviour:
   sizeMultiplier: 2
   sizeUpEffect: {fileID: 5880797563141009103, guid: 85621f11fee53944a9f3860e521dc6eb, type: 3}
   sizeDownEffect: {fileID: 4021103657954561960, guid: 8a7e171e75521e84cad5d7f1c0402929, type: 3}
+  sizeUp: {fileID: 8300000, guid: 6049a57f870962c43a0737919c922a5e, type: 3}
+  sizeDown: {fileID: 8300000, guid: 168c2ccb578aed24281c9bc2433d34f8, type: 3}
 --- !u!114 &2597895161084641267
 MonoBehaviour:
   m_ObjectHideFlags: 0

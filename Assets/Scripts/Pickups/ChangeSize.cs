@@ -14,6 +14,11 @@ public class ChangeSize : MonoBehaviour
     [SerializeField] ParticleSystem sizeDownEffect;
     VFXManager vFXManager;
 
+    [SerializeField] AudioClip sizeUp;
+    [SerializeField] AudioClip sizeDown;
+
+    AudioSource audioSource;
+
     private void Start() {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         Player player = p.GetComponentInChildren<Player>();
@@ -22,6 +27,7 @@ public class ChangeSize : MonoBehaviour
 
         d = GetComponent<DestroyPickup>();
         vFXManager = GetComponent<VFXManager>();
+        audioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();  
     }
     
     private void OnTriggerEnter2D(Collider2D other) 
@@ -46,9 +52,11 @@ public class ChangeSize : MonoBehaviour
             if(sizeMultiplier > 1)
             {
                 vFXManager.makeEffect(sizeUpEffect, other.gameObject);
+                audioSource?.PlayOneShot(sizeUp);
             }
             else{
                 vFXManager.makeEffect(sizeDownEffect, other.gameObject);
+                audioSource?.PlayOneShot(sizeDown);
             }
             d.destroyPickup();
         }    

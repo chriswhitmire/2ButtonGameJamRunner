@@ -172,6 +172,8 @@ MonoBehaviour:
   speedMultiplier: 0.5
   SpeedUpEffect: {fileID: 2360655870356088560, guid: 12feaef1d22f6484a963787c0731706d, type: 3}
   SpeedDownEffect: {fileID: 5318118474938795682, guid: 4588b439e182d6d428ba26c149ca19e4, type: 3}
+  speedUp: {fileID: 8300000, guid: e7a47b870b3d62c409859783aa14306e, type: 3}
+  slowDown: {fileID: 8300000, guid: 6728e34bf862c2b4b944c44c595e32a7, type: 3}
 --- !u!114 &-4182999140356627963
 MonoBehaviour:
   m_ObjectHideFlags: 0
